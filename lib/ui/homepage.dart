@@ -94,7 +94,7 @@ class TodoState extends State<Homepage>{
                   trailing: Checkbox(
                     onChanged: (bool boolean){
                       setState(() {
-                        compTodo[index].done = boolean;
+                        
                       });
                       provider.update(compTodo[index]);
                     },

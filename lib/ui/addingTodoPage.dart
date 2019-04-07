@@ -41,7 +41,6 @@ class AddingTodoState extends State<AddingTodopage>{
               child: Text("Save"),
               onPressed: () async{
                 if (_formKey.currentState.validate()) {
-                  print("Pass");
                   await provider.open('todo.db');
                   await provider.insert(Todo(title : addTodoController.text));
                   Navigator.pop(context);
