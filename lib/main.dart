@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assignment_02/ui/homepage.dart';
+import 'package:flutter_assignment_02/ui/addingTodoPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +22,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: "/",
+      routes: {
+        "/" : (context) => Homepage(),
+        "/adding" :(context) => AddingTodopage(),
+      },
     );
   }
 }

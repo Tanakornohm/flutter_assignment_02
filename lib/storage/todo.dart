@@ -2,7 +2,7 @@ import 'package:sqflite/sqflite.dart';
 
 
 final String tableTodo = "todo";
-final String columnId = "_id";
+final String columnId = "id";
 final String columnTitle = "title";
 final String columnDone = "done";
 
@@ -10,6 +10,7 @@ class Todo {
   int id;
   String title;
   bool done;
+
 
   Map<String, dynamic> toMap() {
     var map = <String, dynamic>{
@@ -23,6 +24,9 @@ class Todo {
 
     
   }
+
+  Todo({this.id, this.title, this.done});
+
   Todo.fromMap(Map<String, dynamic> map) {
     id = map[columnId];
     title = map[columnTitle];
